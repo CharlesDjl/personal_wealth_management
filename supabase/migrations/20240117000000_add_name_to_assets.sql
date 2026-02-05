@@ -1,0 +1,2 @@
+-- 增加 name 字段
+ALTER TABLE assets ADD COLUMN IF NOT EXISTS name VARCHAR(255);

@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+supabase
+pandas
+numpy
+tushare
+python-dotenv
+requests
+pydantic
+pydantic-settings
+email-validator
+httpx
+dashscope
+python-multipart
