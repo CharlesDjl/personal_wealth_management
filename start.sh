@@ -24,6 +24,13 @@ cleanup() {
 
 trap cleanup SIGINT SIGTERM
 
+# 检查 .env 文件
+if [ ! -f ".env" ]; then
+    echo -e "${RED}错误: 未找到 .env 文件${NC}"
+    echo -e "${YELLOW}请复制 .env.example 并填写配置: cp .env.example .env${NC}"
+    exit 1
+fi
+
 # 检查 Python 和 node 是否存在
 if ! command -v python3 &> /dev/null; then
     echo -e "${RED}错误: 未找到 python3${NC}"
